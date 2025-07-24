@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio Page</title>
+  <link rel="stylesheet" href="styles/card.css" />
+  <link rel="stylesheet" href="styles/registration.css" />
+</head>
+<body>
+
+  <!-- Task 1: Card Component -->
+  <section class="portfolio-section">
+    <div class="card">
+      <div class="card-content">
+        <h3>Project Title</h3>
+        <p>This is a brief description of my portfolio project.</p>
+        <!-- Fixed: Use anchor instead of button -->
+        <a href="assests/placeholder.html" class="view-btn" target="_blank">View Details</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Task 2: User Registration Form -->
+  <section class="form-section">
+    <form id="registrationForm" class="form-container">
+      <h2>Register</h2>
+
+      <div class="form-group">
+        <label>First Name:</label>
+        <input type="text" required />
+      </div>
+
+      <div class="form-group">
+        <label>Last Name:</label>
+        <input type="text" required />
+      </div>
+
+      <div class="form-group">
+        <label>Email Address:</label>
+        <input type="email" required />
+      </div>
+
+      <div class="form-group">
+        <label>Password:</label>
+        <input type="password" id="password" required oninput="checkPasswordStrength()" />
+      </div>
+
+      <div class="form-group">
+        <label>Confirm Password:</label>
+        <input type="password" required />
+      </div>
+
+      <div class="form-group">
+        <label>Date of Birth:</label>
+        <input type="date" required />
+      </div>
+
+      <div class="form-group">
+        <label>Gender:</label>
+        <select required>
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Upload Profile Picture:</label>
+        <input type="file" accept="image/*" />
+      </div>
+         
+      <div style="display: flex; justify-content: center; align-items: center; margin-top: 10px;">
+  <input type="checkbox" id="terms" name="terms">
+<label for="terms" style="margin-left: 10px;"><strong>I agree to the Terms and Conditions</strong></label>
+      </div>
+
+      <div class="form-group">
+        <label>Password Strength:</label>
+        <div id="strengthIndicator">Enter password...</div>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+  <script src="scripts/registration.js"></script>
+</body>
+</html>
